@@ -1,0 +1,687 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+// анимации
+
+@keyframes navtoggle
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(225deg)
+@keyframes navtoggle2
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(315deg) translateY(-5px) translateX(4px)
+@keyframes sliderRightOn 
+	0%
+		transform: translateX(640px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+@keyframes descmin
+	0%
+		transform: translateY(150px)
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	h2
+		font-family: $ptserif
+	a
+		color: #828282
+		transition: 0.2s
+		&:hover
+			text-decoration: none
+		&:focus
+			outline: 0
+			text-decoration: none
+	.aside-lines
+		display: inline-block
+		position: relative
+		&:before, &:after
+			content: ""
+			width: 60px
+			position: absolute
+			height: 0
+			top: 50%
+			border-bottom: 1px solid #CCCCCC
+			margin-top: -1px
+		&:before
+			left: -72px
+		&:after
+			right: -72px
+	.shadow
+		position: relative
+		&:after
+			position: absolute
+			z-index: -1
+			content: ""
+			width: 100%
+			height: 100%
+			background-color: rgba(#000, 0.15)
+			filter: blur(20px)
+			top: 18px
+			left: 20px
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.content
+	z-index: -1
+	.col-lg-7
+		h2
+			font-family: $ptserif
+			font-weight: bold
+			font-size: 42px
+			line-height: 56px
+			color: #343434
+			margin-top: 0
+			margin-bottom: 16px
+			span
+				color: $blue
+		article
+			height: 670px
+			padding-top: 40px
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				z-index: -1
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 230px
+				border-radius: 5px
+				background-color: $blue
+			.header
+				
+			.article-main
+				position: relative
+				padding-bottom: 81px
+				.photo
+					overflow: hidden
+					border-radius: 5px
+					img
+						width: 100%
+						height: auto
+				.desc-min
+					position: absolute
+					bottom: 20px
+					width: 93%
+					left: 3.5%
+					text-align: center
+					z-index: 10
+					background-color: #FFF
+					color: #333
+					padding: 38px 35px
+					box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+					border-radius: 5px
+					opacity: 0
+					animation: 1s descmin forwards
+					animation-delay: 0.5s
+					p
+						font-size: 18px
+						line-height: 25px
+		.desc-full
+			margin-top: 80px
+			h2
+				margin-bottom: 30px
+			ul
+				list-style: none
+				margin: 0
+				padding: 0 0 87px
+				li
+					color: #333
+					font-size: 18px
+					line-height: 25px
+					position: relative
+					padding-bottom: 20px
+					padding-left: 35px
+					color: transparent
+					transition: 1s ease
+					transition-delay: 0.5s
+					&:before
+						width: 25px
+						height: 1px
+						top: 12.5px
+						left: 0
+						background-color: transparent
+						position: absolute
+						content: ""
+						transition: 1s ease
+						transition-delay: 0s
+					&.show-item
+						color: #333
+						&:before
+							background-color: #ccc
+
+	// aside styles
+	.aside
+		position: relative
+		.main-right
+			background: $blue
+			border-radius: 0 0 5px 5px
+			padding: 0 36px 20px
+			height: 670px
+			position: relative
+			.white-box
+				background-color: #FFF
+				height: 650px
+				box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+				border-radius: 0 0 5px 5px
+				position: relative
+			// стили таймера
+			.b-timer
+				text-align: center
+				.text-box
+					height: 117px
+					display: table-cell
+					vertical-align: bottom
+					padding-bottom: 10px
+					padding-left: 23px
+					padding-right: 23px
+				p
+					font-size: 18px
+					line-height: 21px
+					display: inline
+				.b-timer-wrapper
+					display: inline-block
+					width: 100%
+					font-size: 0
+					background-color: #F7F7F7
+					padding: 11px 65px 13px
+					.b-timer__item
+						display: inline-block
+						width: 25%
+						font-size: 10px
+						color: #BDBDBD
+						font-weight: bold
+						span
+							font-family: $bebas
+							display: block
+							font-size: 50px
+							line-height: 100%
+							color: #4F4F4F
+							font-weight: normal
+			// стили message
+			#system-message-container
+				position: absolute
+				width: 100%
+				height: auto
+				z-index: 101
+				text-align: center
+
+				#system-message
+					background-color: #fff
+					border-radius: 5px
+					margin: 0 5px
+					.alert
+						font-family: $bebas
+						font-size: 24px
+						padding-top: 40%
+						.close
+							display: inline-block
+							cursor: pointer
+							position: absolute
+							right: 10px
+							top: 10px
+							line-height: 5px
+						.alert-heading
+							font-size: 28px
+			// стили формы
+			form
+				padding: 0 34px
+				position: relative
+				font-weight: normal
+				.land-label
+					display: inline-block
+					color: #999999
+					font-size: 16px
+					font-weight: lighter
+				select, .jq-selectbox
+					background-color: transparent
+					border: none
+					margin-top: 19px
+					appearance: none
+					outline: none
+					margin-bottom: 15px
+					&.focused
+						.jq-selectbox__trigger-arrow
+							transform: rotate(180deg) translateY(-2px)
+				.jq-selectbox__dropdown
+					display: inline-block
+					box-shadow: 0 0 15px rgba(#000, 0.15)
+				.jq-selectbox__select-text
+					display: inline-block
+				.jq-selectbox__trigger
+					display: inline-block
+					.jq-selectbox__trigger-arrow
+						display: inline-block
+						width: 7px
+						height: 10px
+						margin-left: 10px
+						transition: 0.2s
+						background: url("../img/icon/select-arrow.png") 0 3px no-repeat
+				ul
+					padding: 0
+					left: 0
+					display: block
+					width: 100%
+				ul li, .jq-selectbox__select
+					padding: 10px 5px 10px 40px
+				ul li, .jq-selectbox
+					background-color: #FFF
+					&.land
+						background-repeat: no-repeat
+						background-position: 10px center
+						display: block
+						&.br
+							background-image: url("../img/icon/flag-br.jpg") 
+						&.ru
+							background-image: url("../img/icon/flag-ru.jpg") 
+						&.kz
+							background-image: url("../img/icon/flag-kz.jpg") 
+						&.ua
+							background-image: url("../img/icon/flag-ua.png")
+				.input--nariko
+					position: relative
+					display: block
+					input
+						border: none
+						border-bottom: 1px solid #E5E5E5
+						width: 100%
+						padding-top: 10px
+						outline: none
+						margin-bottom: 25px
+					label
+						&:not(.error)
+							position: absolute
+							font-size: 16px
+							color: #999
+							font-weight: normal
+							top: 10px
+							transition: 0.2s
+							left: 0
+							cursor: text
+							width: 100%
+						&.error
+							color: $blue
+							position: relative
+							font-size: 12px
+							top: -20px
+							left: 0
+					&.input--filled
+						label:not(.error)
+							font-size: 14px
+							cursor: default
+							transform: translateY(-20px)
+				input[type="checkbox"]
+					display: none
+					& + label
+						padding-left: 40px
+						position: relative
+						font-size: 16px
+						line-height: 16px
+						font-size: 16px
+						color: #999
+						font-weight: lighter
+						&:before
+							position: absolute
+							content: ""
+							width: 20px
+							height: 20px
+							border: 1px solid #ccc
+							left: 0
+							top: 0
+							border-radius: 5px
+					&:checked + label
+						&:after
+							position: absolute
+							content: ""
+							width: 23px
+							height: 20px
+							background-image: url("../img/icon/checked.svg")
+							background-repeat: no-repeat
+							left: 1px
+							top: 0
+				button
+					display: block
+					background-color: #FF7D14
+					border: none
+					width: 80%
+					margin-left: auto
+					margin-right: auto
+					color: #fff
+					border-radius: 5px
+					position: relative
+					padding: 10px 25px
+					margin-top: 15px
+					outline: none
+					&:before
+						position: absolute
+						width: 90%
+						left: 5%
+						bottom: -3px
+						content: ""
+						height: 10%
+						background-color: #FF7D14
+						filter: blur(5px)
+						transition: 0.2s
+					&:hover, &:focus
+						&:before
+							opacity: 0
+					&:focus
+						box-shadow: inset 0 0 15px rgba(#000, 0.25)
+
+		.aside-sale
+			background-color: $blue
+			padding: 20px 36px
+			margin-top: 80px
+			border-radius: 5px
+			.info
+				background-color: #FFF
+				box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+				border-radius: 5px
+				position: relative
+				.icon-box
+					padding-top: 52px
+					padding-bottom: 55px
+					text-align: center
+					img
+						margin-left: -44px
+				p
+					text-align: center
+					font-size: 18px
+					padding: 0 25px
+					line-height: 22px
+					margin-bottom: 40px
+				a
+					background-color: #507299
+					padding: 10px 25px
+					margin: 0 23px 49px
+					color: #fff
+					display: block
+					border-radius: 5px
+					position: relative
+					&:after
+						position: absolute
+						content: ""
+						width: 75px
+						height: 100%
+						right: 0
+						top: 0
+						border-left: 1px solid #3A5471
+						background: url("../img/icon/vklogo.svg") 19px 13px no-repeat
+					&:before
+						position: absolute
+						content: ""
+						width: 90%
+						left: 5%
+						bottom: -2px
+						height: 10px
+						background-color: #507299
+						filter: blur(5px)
+						transition: 0.2s
+					&:hover, &:focus
+						&:before
+							opacity: 0
+					&:focus
+						box-shadow: inset 0 0 15px rgba(#000, 0.25)
+	.bott-info
+		.col-lg-7
+			float: left
+		.col-lg-4
+			float: right
+
+.modal
+	.modal-dialog
+		max-width: 384px
+		width: auto
+		margin: 10px auto
+	.modal-content
+		padding: 40px
+	button.close
+		background-color: transparent
+		position: absolute
+		display: inline-block
+		width: auto
+		padding: 0
+		right: 10px
+		top: 10px
+	h4
+		text-align: center
+		font-size: 42px
+		font-family: $bebas
+		margin: 0 0 35px
+		font-weight: bold
+		&>span
+			display: block
+			line-height: 5px
+			position: relative
+			top: 20px
+			span.lines
+				position: relative
+				font-size: 0
+				display: inline-block
+				vertical-align: middle
+				&:after, &:before
+					position: absolute
+					content: ""
+					border-bottom: 1px solid #ccc
+					width: 50px
+				&:before
+					top: 50%
+					left: -62px
+				&:after
+					top: 50%
+					right: -62px
+
+	.form-group
+		padding: 0
+		position: relative
+	.input--nariko
+		position: relative
+		display: block
+		input
+			border: none
+			border-bottom: 1px solid #E5E5E5
+			width: 100%
+			padding-top: 10px
+			outline: none
+			margin-bottom: 25px
+			&::-webkit-input-placeholder
+				opacity: 0
+				transition: 0.3s
+			&::-moz-placeholder
+				opacity: 0
+				transition: 0.3s
+			&:-moz-placeholder
+				opacity: 0
+				transition: 0.3s
+			&:-ms-input-placeholder
+				opacity: 0
+				transition: 0.3s
+			&:focus
+				&::-webkit-input-placeholder
+					opacity: 1
+				&::-moz-placeholder
+					opacity: 1
+				&:-moz-placeholder
+					opacity: 1
+				&:-ms-input-placeholder
+					opacity: 1
+		label
+			position: absolute
+			font-size: 16px
+			color: #999
+			font-weight: normal
+			top: 10px
+			transition: 0.2s
+			cursor: text
+			width: 100%
+			&.error
+				color: $blue
+				position: relative
+		&.input--filled
+			label
+				font-size: 14px
+				cursor: default
+				transform: translateY(-20px)
+		&:focus
+			border: none
+			border-bottom: 1px solid #E5E5E5
+			box-shadow: none
+	input[type="checkbox"]
+		display: none
+		& + label
+			padding-left: 35px
+			max-width: 287px
+			position: relative
+			font-size: 16px
+			line-height: 16px
+			color: #999
+			font-weight: lighter
+			margin-bottom: 30px
+			&:before
+				position: absolute
+				content: ""
+				width: 20px
+				height: 20px
+				border: 1px solid #ccc
+				left: 0
+				top: 0
+		&:checked + label
+			&:after
+				position: absolute
+				content: ""
+				width: 23px
+				height: 20px
+				background-image: url("../img/icon/checked.svg")
+				background-repeat: no-repeat
+				left: 1px
+				top: 0
+	button
+		background-color: $blue
+		border: none
+		color: #fff
+		height: auto
+		padding: 9px 25px
+		position: relative
+		display: block
+		width: 100%
+		font-size: 18px
+		border-radius: 3px
+		margin-bottom: 10px
+	.social-login
+		ul
+			margin-top: 10px
+			margin-bottom: 40px
+			display: block
+			float: left
+			padding: 0
+			li
+				display: inline-block
+				float: left
+				position: relative
+				a
+					display: inline-block
+					width: 50px
+					height: 50px
+					border-radius: 25px
+					border: 1px solid #999999
+					text-align: center
+					vertical-align: middle
+					line-height: 45px
+					margin-left: 25px
+					opacity: 0.8
+					img
+						display: inline-block
+					&:hover
+						background-color: #FFF
+					&.vk
+						margin-left: 0
+						border-color: #4C6C91
+						background-color: #4C6C91
+					&.fb
+						border-color: #3B5998
+						background-color: #3B5998
+					&:hover
+						opacity: 1
+				&:after
+					position: absolute
+					content: ""
+					width: 4px
+					border-bottom: 1px solid #ccc
+					right: -15px
+					top: 50%
+				&:last-child:after
+					content: none
+	.modal-footer
+		text-align: center
+		p
+			font-size: 16px
+			line-height: 16px
+			position: relative
+			&:after
+				position: absolute
+				content: ""
+				height: 8px
+				border-left: 1px solid $blue
+				left: 50%
+				top: -19px
+			a
+				color: #2F80ED
+				&.forgot
+					display: block
+					margin-top: 24px
+					position: relative
+					&:before
+						content: ""
+						position: absolute
+						top: -14px
+						left: 50%
+						height: 4px
+						border-left: 1px solid #ccc
+
+
+	
+
+@import "media" // Всегда в конце

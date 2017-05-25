@@ -1,0 +1,270 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1204px)
+	.content
+		.col-lg-7
+			.row	
+				margin-right: 0
+				margin-left: 0
+				h2
+					font-size: 45px
+					line-height: 45px
+					margin-bottom: 24px
+				article
+					padding-top: 37px
+					.article-main .desc-min
+						padding: 67px 26px 69px
+						p
+							&.typedjs
+								display: none
+							&.typedmobile
+								opacity: 1
+				.desc-full
+					margin-top: 50px
+					li
+						color: #333
+						transition: none
+						margin-left: 10px
+						padding-left: 25px
+						&:before
+							background-color: #ccc
+							width: 13px
+		.aside
+			.row
+				margin-left: 0
+				.main-right
+					padding-left: 21px
+					padding-right: 21px
+					form
+						button
+							margin-top: 25px
+			.aside-sale
+				padding: 20px 21px
+				margin-top: 50px
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 999px)
+	.content
+		.col-lg-7
+			.row
+				margin-right: -4px
+				h2
+					font-size: 30px
+					line-height: 35px
+					margin-bottom: 18px
+				article
+					.article-main
+						.photo
+							min-height: 345px
+							overflow: hidden
+							text-align: center
+							border-radius: 5px
+							img
+								height: 100%
+								width: auto
+								text-align: center
+								display: block
+								margin-left: -60%
+						.desc-min
+							padding: 53px 26px 49px
+				.desc-full
+					ul
+						li
+							font-size: 16px
+							color: #333
+							&:before
+								background-color: #ccc
+		.aside
+			.row
+				margin-left: -12px
+				.main-right
+					form
+						input[type=checkbox]+label
+							padding-left: 26px
+				.aside-sale
+					.info
+						.icon-box
+							padding-bottom: 35px
+						p
+							padding: 0 15px
+							line-height: 24px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+	.content
+		.col-lg-7
+			.row
+				margin-left: -16px
+				margin-right: -15px
+				article
+					height: auto
+					border-radius: 0
+					padding-top: 27px
+					.header
+						text-align: center
+						a
+							display: block
+							margin-left: auto
+							margin-right: auto
+							width: 208px
+							padding: 7px
+							background-color: #FF7D14
+							color: #fff
+							border-radius: 5px
+							position: relative
+							margin-bottom: 40px
+							&:after
+								position: absolute
+								content: ""
+								width: 90%
+								height: 10%
+								left: 5%
+								bottom: -4px
+								background-color: #FF7D14
+								filter: blur(5px)
+								transition: 0.2s
+							&:hover
+								&:after
+									opacity: 0
+					.article-main
+						padding-bottom: 145px
+						.desc-min
+							padding: 43px 30px 30px
+							width: 95%
+							left: 2.5%
+						.photo
+							min-height: auto
+							img
+								height: auto
+								width: 100%
+								margin: 0
+				h2
+					text-align: center
+					line-height: 30px
+					margin-bottom: 28px
+			.desc-full
+				padding: 0 10px
+		.aside
+			float: none
+			.row
+				margin-left: -16px
+				margin-right: -15px
+				.main-right
+					height: auto
+					padding: 40px 10px 0
+					border-radius: 0
+					.white-box
+						border-radius: 5px
+						max-width: 480px
+						margin-left: auto
+						margin-right: auto
+					.b-timer
+						.text-box
+							padding-left: 60px
+							padding-right: 60px
+							height: 96px
+					form
+						padding-left: 94px
+						padding-right: 94px
+		.bott-info
+			.aside
+				float: none
+				.aside-sale
+					margin-top: 0
+					padding-left: 10px
+					padding-right: 10px
+					padding-bottom: 39px
+					border-radius: 0 0 5px 5px
+					.info
+						max-width: 480px
+						margin-left: auto
+						margin-right: auto
+						p
+							padding: 0 58px
+						a
+							width: 292px
+							margin-left: auto
+							margin-right: auto
+
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px)
+	.content
+		.col-lg-7
+			.row
+				h2
+					padding: 0 10px
+				article
+					.article-main
+						.photo
+							min-height: 255px
+							img
+								height: 100%
+								width: auto
+								margin-left: -40%
+						.desc-min
+							padding-top: 15px
+							padding-bottom: 15px
+		.aside
+			.row	
+				.main-right
+					.b-timer
+						.text-box
+							padding-left: 10px
+							padding-right: 10px
+						.b-timer-wrapper
+							padding-right: 45px
+							padding-left: 45px
+					form
+						padding-right: 10px
+						padding-left: 10px
+				.aside-sale
+					.info
+						p
+							padding-right: 10px
+							padding-left: 10px
+						a
+							width: 260px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

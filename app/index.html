@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Singlepage</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body>
+	<!-- ModalCallback -->
+	<div class="modal fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="b-modal-title">
+				<span>Вход</span>
+				<button data-dismiss="modal" class="b-modal-reg" data-toggle="modal" data-target="#modalreg">Регистрация</button>
+			</div>
+			<button data-dismiss="modal" class="modal-close"></button>
+			<form class="form">
+				<div class="b-modal-wrappper">
+					<div class="b-modal-row">
+						<input class="b-modal-input" type="text" placeholder="Электронная почта">
+						<div class="b-prompt">
+							<div class="b-prompt-ico">
+								?
+							</div>
+							<div class="b-prompt-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>                                    
+						</div>                        
+					</div>
+						<div class="b-modal-row">
+							<input class="b-modal-input" type="text" placeholder="Пароль">
+							<div class="b-prompt">
+								<div class="b-prompt-ico">
+									?
+								</div>
+								<div class="b-prompt-text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>                                    
+							</div>                        
+						</div>
+						<div class="b-modal-social">
+							<ul>
+								<li><a href=""></a></li>
+								<li><a href=""></a></li>
+								<li><a href=""></a></li>
+								<li><a href=""></a></li>
+							</ul>
+						</div>
+				</div>
+				<input class="b-modal-submit" type="submit" value="Войти">
+			</form>
+		</div>
+	</div>
+
+	<!-- ModalCallback -->
+	<div class="modal fade" id="modalreg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="b-modal-title">
+				<span>Регистрация</span>
+				<button data-dismiss="modal" class="b-modal-reg" data-toggle="modal" data-target="#modallogin">Вход</button>
+			</div>
+			<button data-dismiss="modal" class="modal-close"></button>
+			<form  action="" class="form">
+				<div class="b-modal-wrappper">
+					<div class="b-modal-row">
+						<input class="b-modal-input b-mail" type="text" placeholder="Электронная почта">
+						<div class="b-prompt">
+							<div class="b-prompt-ico">
+									?
+							</div>
+							<div class="b-prompt-text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>                                    
+						</div>                        
+					</div>
+					<div class="b-modal-row">
+						<input class="b-modal-input" type="text" placeholder="Пароль">
+						<div class="b-prompt">
+								<div class="b-prompt-ico">
+										?
+								</div>
+								<div class="b-prompt-text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>                                    
+						</div>                        
+					</div>
+					<div class="b-modal-row">
+						<input class="b-modal-input b-pass" type="text" placeholder="Пароль еще раз">
+						<div class="b-prompt">
+							<div class="b-prompt-ico">
+								?
+							</div>
+							<div class="b-prompt-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>                                    
+						</div>                        
+					</div>    
+					<div class="b-checkbox">
+							<input type="checkbox" id="a1" name="cc" />
+							<label for="a1"><span></span><i>Согласен получать уведомления на электронную почту</i></label>  
+					</div>                
+					<div class="b-modal-social">
+						<ul>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<input class="b-modal-submit" type="submit" value="Зарегистрироваться">
+			</form>
+		</div>
+	</div>
+		
+
+	<!-- begin b-header -->
+		
+	<header class="b-header">
+		<div class="wrapper-content">
+			<div class="b-header-top">
+				<div class="b-header-left">
+						<a href="" class="b-logo">
+							 <img src="images/logo.svg" alt=""> 
+						</a>
+						<div class="b-header-menu">
+								<ul>
+										<li class="b-heaeder-drop">
+												<a>Об Академии<i class="fa fa-angle-down" aria-hidden="true"></i> </a>
+												<div class="b-header-dropdown">
+														<ul>
+																<li><a href="">История</a></li>
+																<li><a href="">Партнеры</a></li>
+																<li><a href="">Брокеры</a></li>
+																<li><a href="">Вакансии</a></li>
+																<li><a href="">Контакты</a></li>
+														</ul>
+												</div>                             
+										</li>
+										<li class="b-menu-drop">
+												<a>
+														<div class="menu-icon">
+																<span class="b-menu__icon">
+																		<i class="b-menu__line b-menu__line_1"></i>
+																		<i class="b-menu__line b-menu__line_2"></i>
+																		<i class="b-menu__line b-menu__line_3"></i>
+																</span>
+														</div> 
+														Стратегии
+												</a>
+										</li>
+										<li><a href="">Обучение</a></li>
+										<li><a href="">Статьи</a></li>
+										<li><a href="">Книги</a></li>
+								</ul>
+						</div>
+				</div>
+				<div class="b-header-right">
+					<div class="b-user">
+						<span class="b-user-name">Валерий</span>
+						<div class="b-user-img">
+							<img src="images/user-img1.png" alt="">
+							<div class="b-user-status">
+									Vip
+							</div>
+						</div>
+					</div>
+					<div class="b-mobile-menu">
+						<div class="menu-icon">
+							<span class="b-menu__icon">
+								<i class="b-menu__line b-menu__line_1"></i>
+								<i class="b-menu__line b-menu__line_2"></i>
+								<i class="b-menu__line b-menu__line_3"></i>
+							</span>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+		<div class="b-menu">
+			<div class="center-content">
+				<ul>
+					<li><a href="">Снайпер</a></li>
+					<li><a href="">Советники</a></li>
+					<li><a href="">Бинарные опционы</a></li>
+					<li><a href="">VSA анализ</a></li>
+					<li><a href="">Бинарные опционы</a></li>
+					<li><a href="">VSA анализ</a></li>
+					<li><a href="">Форекс без риска</a></li>
+				</ul> 
+			</div>    
+		</div>             
+	</header>
+		
+				<!-- end b-header -->
+	<div class="content">
+		<div class="container">
+			<div class="row">
+			<div class="head-info">
+				<div class="col-lg-7 col-md-7 col-sm-6">
+					<div class="row">
+						<article>
+							<div class="header">
+								<h2>До 10 мая получи скидку 20% на индивидуальное обучение<br>«<span>До результата</span>»!</h2>
+								<a href="#registration" class="visible-xs scrollto">Оформить заявку</a>
+							</div>
+							<div class="article-main">
+								<div class="photo">
+									<img src="img/Фото.jpg" alt="">
+								</div>
+								<div class="desc-min">
+									<p>С тобой занимаются до тех пор, пока ты не достигнешь намеченного результата С тобой занимаются до тех пор, пока ты не достигнешь намеченного результата</p>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="col-lg-4 col-lg-offset-1 col-md-5 col-sm-6 aside">
+					<div class="row">
+						<div class="main-right">
+							<div class="white-box" id="registration">
+								<div class="b-timer">
+									<div class="b-timer-text">
+										<div class="text-box">
+											<p>
+												Запишись до 7 февраля и получи Holdem Manager 2 в подарок
+											</p>
+										</div>
+										<div class="b-timer-wrapper">
+											<div class="b-timer__item">
+											<span class="day"></span>
+											Дней
+											</div> 
+											<div class="b-timer__item">
+											<span class="hour"></span>
+											Часов
+											</div>
+											<div class="b-timer__item">
+											<span class="min"></span>
+											минут
+											</div>
+											<div class="b-timer__item">
+											<span class="sec"></span>
+											секунд
+											</div>
+										</div>
+									</div>
+			          </div>
+			          <div id="system-message-container">
+									<div id="system-message">
+										<div class="alert alert-message">
+											<a class="close" data-dismiss="alert">×</a>
+
+											<h4 class="alert-heading">Сообщение</h4>
+											<div>
+													<div class="alert-message">Заявка отправлена.</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<form action="">
+									<div class="input-wrap">
+										<label for="" class="land-label">Ваша страна</label>
+										<select>
+											<option class="land br">Беларусь</option>
+											<option class="land ru">Россия</option>
+											<option class="land kz">Казахстан</option>
+											<option class="land ua">Украина</option>
+										</select>
+									</div>
+									<div class="input-wrap">
+										<span class="input input--nariko">
+											<input id="input-1" class="input__field input__field--nariko" name="name" type="text">
+											<label class="input__label input__label--nariko" for="input-1">
+												<span class="input__label-content input__label-content--nariko">Ваше имя</span>
+											</label>
+										</span>
+									</div>
+									<div class="input-wrap">
+										<span class="input input--nariko">
+											<input id="input-2" class="input__field input__field--nariko js-val" name="tel" type="tel" required>
+											<label class="input__label input__label--nariko" for="input-2">
+												<span class="input__label-content input__label-content--nariko">Телефон</span>
+											</label>
+										</span>
+									</div>
+									<div class="input-wrap">
+										<span class="input input--nariko">
+											<input id="input-3" class="input__field input__field--nariko" name="email" type="email" required>
+											<label class="input__label input__label--nariko" for="input-3">
+												<span class="input__label-content input__label-content--nariko">Эл. почта</span>
+											</label>
+										</span>
+									</div>
+									<input id="checkbox1" type="checkbox" checked>
+									<label for="checkbox1">Согласен c договором <a href="">оферты</a></label>
+									<button type="submit" class="btn sec-1__btn">Оформить заявку</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bott-info">
+				<div class="col-lg-4 col-lg-offset-1 col-md-5 col-sm-6 aside">
+					<div class="row">
+						<div class="aside-sale">
+							<div class="info">
+								<div class="icon-box"><img src="img/icon/phones.png" alt=""></div>
+								<p>
+									Напиши нашему менеджеру «Хочу обучение «До результата» со скидкой» в ВК, и он запишет тебя на удобное время.
+								</p>
+								<a href="">Получить скидку</a>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-6">
+					<div class="row">
+						<div class="desc-full">
+							<h2>Обучение «<span>До результата</span>» это:</h2>
+							<ul>
+								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum praesentium veniam, sint dolores veritatis earum?</li>
+								<li>Similique suscipit eius reprehenderit? Aut optio tempore doloribus sapiente saepe voluptatum dolorem, nostrum quidem explicabo!</li>
+								<li>Harum inventore dicta corporis obcaecati nihil fugiat maiores, fugit ratione ipsum quis nulla sint velit.</li>
+								<li>Iusto a dicta velit vero magni consectetur blanditiis ratione provident voluptate ipsum laboriosam, possimus enim.</li>
+								<li>Fugit labore, doloribus similique repudiandae tenetur sed vel sunt reiciendis aut, consectetur laudantium ducimus odit!</li>
+								<li>Sint dolore labore doloremque rem et amet tenetur a, sequi aperiam dolorem magni neque ratione.</li>
+								<li>Quam, necessitatibus, quasi at, sequi facilis quod dolor nisi officiis aperiam quisquam maxime. Consequatur, odio.</li>
+								<li>Et deserunt officia odio, autem hic reiciendis, quaerat, explicabo quod quae nemo blanditiis vel nisi!</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/header-responsive.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/libs.min.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/common.js"></script>
+
+</body>
+</html>
