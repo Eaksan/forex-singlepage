@@ -152,7 +152,7 @@ $(function() {
       if (timestamp < 0) timestamp = 0;
 
       var day = Math.floor( (timestamp/60/60) / 24);
-      var hour = Math.floor(timestamp/60/60);
+      var hour = Math.floor(timestamp/60/60-day*24);
       var mins = Math.floor((timestamp - hour*60*60)/60);
       var secs = Math.floor(timestamp - hour*60*60 - mins*60);
       var left_hour = Math.floor( (timestamp - day*24) / 60 / 60 );
