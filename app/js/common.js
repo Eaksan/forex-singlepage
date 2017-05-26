@@ -135,7 +135,7 @@ $(function() {
     var tmst=parseInt(getCookie('tmst')),d,at;
     if(!tmst){
       d=new Date();
-      d.setHours(d.getHours()+23);
+      d.setHours(d.getHours()+123);
       tmst=Math.floor(d.getTime()/1000);
       setCookie('tmst',tmst,{'expires':15552000,'path':'/'});
       }
@@ -153,9 +153,9 @@ $(function() {
 
       var day = Math.floor( (timestamp/60/60) / 24);
       var hour = Math.floor(timestamp/60/60-day*24);
-      var mins = Math.floor((timestamp - hour*60*60)/60);
-      var secs = Math.floor(timestamp - hour*60*60 - mins*60);
-      var left_hour = Math.floor( (timestamp - day*24) / 60 / 60 );
+      var mins = Math.floor((timestamp - day*24*60*60 - hour*60*60)/60);
+      var secs = Math.floor(timestamp - day*24*60*60 - hour*60*60 - mins*60);
+      var left_hour = Math.floor( (timestamp - day*24*60*60) / 60 / 60 );
 
       $(dayBlock).text(function(){
         if (day < 10){
