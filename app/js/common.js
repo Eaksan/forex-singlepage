@@ -89,7 +89,8 @@ $(function() {
   $("select").styler();
 
   // валидация
-  $(".aside form").validate();
+  $(".aside form").validate({});
+	$("input[name='phoneNumber']").mask("(999) 999-9999");
 
   // плавный скрол
   $("a.scrollto").click(function() {
